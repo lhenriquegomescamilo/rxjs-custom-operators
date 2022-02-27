@@ -1,0 +1,26 @@
+{
+  "name": "rxjs-custom-operators",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "RxJS",
+    "Custom",
+    "Operators"
+  ],
+  "author": "lhenriquegomescamilo@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^17.0.21",
+    "jest": "^27.5.1",
+    "rxjs": "^7.5.4",
+    "typescript": "^4.5.5"
+  }
+}
