@@ -1,4 +1,4 @@
-import {map, Observable} from "rxjs";
+import { map, Observable } from "rxjs";
 
 export function mapIfFalse<T, R>(
     predicate: (t: T) => boolean,
