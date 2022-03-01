@@ -15,7 +15,7 @@ test("it should switchMap value if predicate is true", done => {
         .subscribe({
             next: value => acc.push(value),
             complete: () => {
-                expect(acc).toEqual([{ v: 1 }, { m: 4 }]);
+                expect([{ v: 1 }, { m: 4 }]).toEqual(acc);
                 done();
             }
         });
@@ -32,7 +32,7 @@ test("it should switchMap by orElse when the predicate is false", done => {
         .subscribe({
             next: value => acc.push(value),
             complete: () => {
-                expect(acc).toEqual([{ m: 2 }, { m: 4 }]);
+                expect([{ m: 2 }, { m: 4 }]).toEqual(acc);
                 done();
             }
         });

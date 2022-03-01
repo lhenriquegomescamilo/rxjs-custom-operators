@@ -28,7 +28,7 @@ test("it should not switchMap value if predicate is false", done => {
         .subscribe({
             next: value => acc.push(value),
             complete: () => {
-                expect(acc).toEqual([{ v: 1 }, { v: 2 }]);
+                expect([{ v: 1 }, { v: 2 }]).toEqual(acc);
                 done();
             }
         });

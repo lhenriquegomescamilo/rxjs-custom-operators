@@ -12,7 +12,7 @@ test("it should map value if predicate is false", done => {
         .subscribe({
             next: value => acc.push(value),
             complete: () => {
-                expect(acc).toEqual([{ v: 1 }, { m: 4 }]);
+                expect([{ v: 1 }, { m: 4 }]).toEqual(acc);
                 done();
             }
         });
@@ -28,7 +28,7 @@ test("it should not map value if predicate is true", done => {
         .subscribe({
             next: value => acc.push(value),
             complete: () => {
-                expect(acc).toEqual([{ v: 1 }, { v: 2 }]);
+                expect([{ v: 1 }, { v: 2 }]).toEqual(acc);
                 done();
             }
         });

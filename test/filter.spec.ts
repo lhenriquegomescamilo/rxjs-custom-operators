@@ -10,7 +10,7 @@ test("it should filter not null values", done => {
                 acc.push(value);
             },
             complete: () => {
-                expect(acc).toEqual([{ v: 1 }]);
+                expect([{ v: 1 }]).toEqual(acc);
                 done();
             }
         });
@@ -25,7 +25,7 @@ test("it should filter only null values", done => {
                 acc.push(value);
             },
             complete: () => {
-                expect(acc).toEqual([null]);
+                expect([null]).toEqual(acc);
                 done();
             }
         });
@@ -40,7 +40,7 @@ test("it should filter prop not null", done => {
                 acc.push(value);
             },
             complete: () => {
-                expect(acc).toEqual([{ v: 1 }]);
+                expect([{ v: 1 }]).toEqual(acc);
                 done();
             }
         });
