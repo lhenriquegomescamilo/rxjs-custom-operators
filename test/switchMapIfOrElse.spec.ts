@@ -1,15 +1,15 @@
 import { of } from "rxjs";
-import { mapIfOrElse } from "../src/map";
+import { switchMapIfOrElse } from "../src/switchMap";
 
 
-const ignored = (it) => it
+const ignored = (it) => of(it)
 
-test("it should map value if predicate is true", done => {
+test("it should switchMap value if predicate is true", done => {
     const acc = [];
     of({ v: 1 }, { v: 2 })
-        .pipe(mapIfOrElse(
+        .pipe(switchMapIfOrElse(
             ({ v }) => v > 1,
-            ({ v }) => ({ m: (v * 2) }),
+            ({ v }) => of({ m: (v * 2) }),
             ignored
         ))
         .subscribe({
@@ -21,13 +21,13 @@ test("it should map value if predicate is true", done => {
         });
 });
 
-test("it should map by orElse when the predicate is false", done => {
+test("it should switchMap by orElse when the predicate is false", done => {
     const acc = [];
     of({ v: 1 }, { v: 2 })
-        .pipe(mapIfOrElse(
+        .pipe(switchMapIfOrElse(
             ({ v }) => v < 0,
             ignored,
-            ({ v }) => ({ m: (v * 2) })
+            ({ v }) => of({ m: (v * 2) })
         ))
         .subscribe({
             next: value => acc.push(value),

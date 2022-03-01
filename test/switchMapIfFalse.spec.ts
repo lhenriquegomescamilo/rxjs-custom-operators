@@ -1,13 +1,13 @@
 import { of } from "rxjs";
-import { mapIfFalse } from "../src/map";
+import { switchMapIfFalse } from "../src/switchMap";
 
 
-test("it should map value if predicate is false", done => {
+test("it should switchMap value if predicate is false", done => {
     const acc = [];
     of({ v: 1 }, { v: 2 })
-        .pipe(mapIfFalse(
+        .pipe(switchMapIfFalse(
             ({ v }) => !(v > 1),
-            ({ v }) => ({ m: (v * 2) })
+            ({ v }) => of({ m: (v * 2) })
         ))
         .subscribe({
             next: value => acc.push(value),
@@ -18,12 +18,12 @@ test("it should map value if predicate is false", done => {
         });
 });
 
-test("it should not map value if predicate is true", done => {
+test("it should not switchMap value if predicate is true", done => {
     const acc = [];
     of({ v: 1 }, { v: 2 })
-        .pipe(mapIfFalse(
+        .pipe(switchMapIfFalse(
             ({ v }) => v > 0,
-            ({ v }) => ({ v: 0 })
+            ({ v }) => of({ v: 0 })
         ))
         .subscribe({
             next: value => acc.push(value),
