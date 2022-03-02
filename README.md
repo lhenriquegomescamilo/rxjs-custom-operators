@@ -40,7 +40,7 @@ on handling events with these operators.
 * Filter by property that are not null
 
 ```ts
-    of({ color: null }, { color: 'red' })
+of({ color: null }, { color: 'red' })
     .pipe(filterPropNotNull('color'))
     .subscribe(value => console.log(value));
 ```
@@ -56,11 +56,11 @@ on handling events with these operators.
 ```ts
 of({ color: null }, { color: 'red' }).pipe(
     mapIfFalse(
-        ({ color }) => color != null, // predicate 
+        ({ color }) => color !== null, // predicate 
         ({ color }) => color // ifFalse
     )
 )
-    .subscribe(value => console.log(value));
+.subscribe(value => console.log(value));
 ```
 
 * The output will be: `red`
@@ -72,11 +72,11 @@ of({ color: null }, { color: 'red' }).pipe(
 ```ts
 of({ color: 'yellow' }, { color: 'red' }).pipe(
     mapIfTrue(
-        ({ color }) => color == 'red', // predicate 
+        ({ color }) => color === 'red', // predicate 
         ({ color }) => color // ifTrue
     )
 )
-    .subscribe(value => console.log(value));
+.subscribe(value => console.log(value));
 ```
 
 * The output will be: `red`
@@ -93,7 +93,7 @@ of({ color: 'yellow' }, { color: 'red' }).pipe(
         ({ color }) => color.length // orElse
     )
 )
-    .subscribe(value => console.log(value));
+.subscribe(value => console.log(value));
 ```
 
 * The output will be: `"yellow" and then will be print "6" `
@@ -111,7 +111,7 @@ of({ color: 'yellow' }, { color: 'red' }).pipe(
         ({ color }) => of(color) // ifFalse -> Observable('red')
     )
 )
-    .subscribe(value => console.log(value));
+.subscribe(value => console.log(value));
 ```
 
 * The output will be: `"red"`
@@ -127,7 +127,7 @@ of({ color: 'yellow' }, { color: 'red' }).pipe(
         ({ color }) => of(color) // ifTrue -> Observable('yellow')
     )
 )
-    .subscribe(value => console.log(value));
+.subscribe(value => console.log(value));
 ```
 
 * The output will be: `"yellow"`
@@ -145,7 +145,7 @@ of({ color: 'yellow' }, { color: 'red' }).pipe(
         ({ color }) => of(color.length) // orElse -> Observable(6)
     )
 )
-    .subscribe(value => console.log(value));
+.subscribe(value => console.log(value));
 ```
 
 * The output will be: `"yellow" and then will be print "3" `
@@ -163,7 +163,7 @@ of({ color: 'yellow' }, { color: 'red' }).pipe(
         ({ color }) => console.log(color), // ifFalse -> ("red")
     )
 )
-    .subscribe();
+.subscribe();
 ```
 
 * The output will be: `"red"`
@@ -177,7 +177,7 @@ of({ color: 'yellow' }, { color: 'red' }).pipe(
         ({ color }) => console.log(color), // ifTrue
     )
 )
-    .subscribe();
+.subscribe();
 ```
 
 * First output: `"yellow"`
@@ -195,7 +195,7 @@ of({ color: 'yellow' }, { color: 'red' }).pipe(
         ({ color }) => console.log(color.length) // orElse
     )
 )
-    .subscribe();
+.subscribe();
 ```
 
 * First output: `"yellow"`
