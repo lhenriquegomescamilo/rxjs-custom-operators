@@ -1,4 +1,4 @@
-[![Node.js Package](https://github.com/lhenriquegomescamilo/rxjs-custom-operators/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/lhenriquegomescamilo/rxjs-custom-operators/actions/workflows/npm-publish.yml)
+[![Node.js Package](https://github.com/lhenriquegomescamilo/rxjs-custom-operators/actions/workflows/npm-publish.yml/badge.svg?branch=master)](https://github.com/lhenriquegomescamilo/rxjs-custom-operators/actions/workflows/npm-publish.yml)
 
 # Description
 
