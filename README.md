@@ -1,3 +1,5 @@
+[![Node.js Package](https://github.com/lhenriquegomescamilo/rxjs-custom-operators/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/lhenriquegomescamilo/rxjs-custom-operators/actions/workflows/npm-publish.yml)
+
 # Description
 
 This project is inspired by library as [RamdaJS](https://ramdajs.com) and try to help developers to be more expressive
