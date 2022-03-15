@@ -1,6 +1,6 @@
 {
   "name": "rxjs-custom-operators",
-  "version": "1.1.2",
+  "version": "1.1.2.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,6 +17,10 @@
   ],
   "author": "lhenriquegomescamilo@gmail.com",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lhenriquegomescamilo/rxjs-custom-operators.git"
+  },
   "dependencies": {
     "@types/node": "^17.0.21",
     "jest": "^27.5.1",
