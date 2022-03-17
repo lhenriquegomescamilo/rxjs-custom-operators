@@ -1,5 +1,5 @@
 import { of } from "rxjs";
-import { switchMapIfFalse } from "../src/switchMap";
+import { switchMapIfFalse } from "../src";
 
 
 test("it should switchMap value if predicate is false", done => {

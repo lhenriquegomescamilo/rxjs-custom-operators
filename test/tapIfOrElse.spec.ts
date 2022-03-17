@@ -1,5 +1,5 @@
 import { of } from "rxjs";
-import { tapIfOrElse } from "../src/tap";
+import { tapIfOrElse } from "../src";
 
 
 const ignored = (it) => of(it)

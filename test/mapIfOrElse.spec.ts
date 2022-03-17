@@ -1,5 +1,5 @@
 import { of } from "rxjs";
-import { mapIfOrElse } from "../src/map";
+import { mapIfOrElse } from "../src";
 
 
 const ignored = (it) => it

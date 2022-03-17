@@ -1,5 +1,5 @@
 import { of } from "rxjs";
-import { mapIfFalse } from "../src/map";
+import { mapIfFalse } from "../src";
 
 
 test("it should map value if predicate is false", done => {

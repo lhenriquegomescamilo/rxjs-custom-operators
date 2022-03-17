@@ -1,5 +1,5 @@
 import { of } from "rxjs";
-import { filterNotNull, filterNull, filterPropNotNull } from "../src/filter";
+import { filterNotNull, filterNull, filterPropNotNull } from "../src";
 
 test("it should filter not null values", done => {
     const acc = [];

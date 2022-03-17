@@ -1,5 +1,5 @@
 import { of } from "rxjs";
-import { switchMapIfOrElse } from "../src/switchMap";
+import { switchMapIfOrElse } from "../src";
 
 
 const ignored = (it) => of(it)

@@ -1,5 +1,5 @@
 import { of } from "rxjs";
-import { tapIfTrue } from "../src/tap";
+import { tapIfTrue } from "../src";
 
 
 test("it should tap value if predicate is true", done => {

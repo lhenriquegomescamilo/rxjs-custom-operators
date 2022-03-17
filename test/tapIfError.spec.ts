@@ -1,5 +1,5 @@
 import { map, of, switchMap, throwError } from "rxjs";
-import { tapError } from "../src/tap";
+import { tapError } from "../src";
 
 
 test("it should tap if has error", done => {
